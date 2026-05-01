@@ -1,0 +1,230 @@
+html,body{
+  margin:0; /* Remove default margin */
+  height:100%; /* Full viewport height */
+  overflow:hidden; /* Hide scrollbars */
+  font-family:system-ui; /* System font for better performance/look */
+  background-image: linear-gradient(to top, #1E0F75,rgb(255, 235, 251));
+  scroll-behavior: smooth;
+  color:#301C1D;
+}
+
+.hero {
+  width: 100wh;
+  height: 80vh;
+  background-image: url("/assets/image/Art_portfolio_home_page.png");
+  background-size: 	851px 500px;
+  background-repeat: no-repeat;
+  background-position-y:75%;
+  background-position-x:32%;
+}
+.title{
+  position: absolute;
+  bottom: 81%;
+  left:61%;
+  font-size: 63px;
+}
+
+.btn-contact{
+  position: absolute;
+  top:26%;
+  left: 72%;
+  transform: translateX(-50%);
+  padding: 22px 100px;
+  font-size: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  backdrop-filter: blur(20px);          /* the actual blur effect */
+  -webkit-backdrop-filter: blur(20px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #301C1D;
+}
+.btn-view{
+  position: absolute;
+  top:70%;
+  left: 30%;
+  transform: translateX(-50%);
+  padding: 22px 100px;
+  font-size: 25px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  backdrop-filter: blur(20px);          /* the actual blur effect */
+  -webkit-backdrop-filter: blur(20px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #301C1D;
+}
+
+.hero .btn-contact:hover {
+  background: black;
+  color: white;
+}
+
+.hero .btn-view:hover{
+  background: black;
+  color: white;
+}
+
+.hero .btn:first-of-type {
+  top: 45%;
+}
+
+.hero .btn:last-of-type {
+  top: 55%;
+}
+
+.scene {
+  width: 90%;
+  height: 80vh;
+  display:flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items:center;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  backdrop-filter: blur(20px);          /* the actual blur effect */
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.scene a{
+  text-decoration: none;
+  color: #301C1D;
+}
+.room {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  transform-style: preserve-3d;
+}
+
+.left-panel {
+  width: 60%;
+  height: 70%;
+  position: relative;
+}
+
+.ring {
+  position:absolute; /* Absolute positioning relative to left-panel */
+  top:100%; 
+  left:60%; /* Position ring inside panel (your custom placement) */
+  width:420px;
+  height:420px; /* Fixed size for carousel */
+  transform:translate(-50%,-50%); /* Center the element using its own width/height */
+  transform-style:preserve-3d; /* Maintain 3D transforms of child items */
+}
+
+.art {
+  position: absolute;
+  top:50%;
+  left: 40%;
+  width: 140px;
+  height: 180px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s cubic-bezier(.22,.61,.36,1);
+}
+
+.art.center {
+  z-index: 10;
+}
+
+.glass.info {
+  width:25vw;        /* 25% of viewport width */
+  height:25vh;        /* 25% height of room (can adjust) */
+  padding:30px;      /* Internal spacing */
+  background: rgba(255,255,255,0.08);
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 40px 120px rgb(151, 0, 151);
+  backdrop-filter: blur(25px);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+  color: rgb(151, 0, 151);
+}
+
+.arrow.left { left: 30px; }
+.arrow.right { right: 30px; }
+
+.intro{
+  width: 89%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px;
+  margin:25px auto;
+  border: 5px dotted rgba(255,255,255,0.3); 
+  border-radius: 15px;
+  color: white;
+}
+
+.image {
+  width: 60px;
+  height: auto;   /* 3:4 ratio */
+  display: contents;
+}
+
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.contact{
+  width: 90%;
+  height: 80vh;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin: 25px auto;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  backdrop-filter: blur(20px);          /* the actual blur effect */
+  -webkit-backdrop-filter: blur(20px);
+  color:white;
+}
+.illustration1{
+  width: 40vh;
+  height: auto;
+}
+.form-button{
+  width: 50%;
+  height: 80vh;
+  justify-content:space-around;
+  align-content: center;
+}
+.btn-submit{
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  backdrop-filter: blur(20px);          /* the actual blur effect */
+  -webkit-backdrop-filter: blur(20px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  color: white;
+}
+
+.contact .btn-submit:hover {
+  background: black;
+  color: white;
+}

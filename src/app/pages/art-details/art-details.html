@@ -1,0 +1,40 @@
+<html>
+  <body>
+    <div class="gallery-container">
+<!-- Title -->
+   <h2 class="title">GALLERY</h2>
+
+  <!-- Filter Tabs -->
+  <div class="filters">
+    <span *ngFor="let period of Category"
+          [class.active]="period === selectedCategory"
+          (click)="selectPeriod(period)">
+      {{ period }}
+    </span>
+  </div>
+
+  <!-- Gallery Grid -->
+<div class="grid">
+  <div class="grid_2">
+      <div *ngFor="let artwork of filteredArt" 
+       class="card"
+       (click)="openPopup(artwork)">
+       <img [src]="'http://localhost:8080' + artwork.imageUrl" />
+    </div>
+  </div>
+</div>
+<!-- Spotlight Overlay -->
+    <div class="overlay" *ngIf="selectedArt" (click)="closePopup()">
+        <div class="spotlight-card" (click)="$event.stopPropagation()">
+        <span class="close-btn" (click)="closePopup()">×</span>
+        <div class="info">
+            <h3>{{ selectedArt.title }}</h3>
+            <p>{{ selectedArt.description }}</p>
+        </div>
+        </div>
+    </div>
+  </div>
+  
+  </body>
+</html>
+

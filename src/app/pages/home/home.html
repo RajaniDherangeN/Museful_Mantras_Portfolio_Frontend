@@ -1,0 +1,77 @@
+<html>
+  <body>
+  <div class="hero">
+    <a [routerLink]="[]" fragment="contact" class="btn-contact">Contact</a>
+    <a [routerLink]="[]" fragment="scene" class="btn-view">View Portfolio</a>
+  </div>
+  <div class="scene" id="scene">
+    <div class="title"><a href="art-details"><h1>Portfolio</h1></a></div>
+  <div class="room">
+    <div class="left-panel">
+      <div class="arrow left" (click)="prev()">‹</div>
+      <div class="arrow right" (click)="next()">›</div>
+      <div *ngFor="let item of artworks; let i = index"
+     class="art"
+     [class.active]="i === activeIndex"
+     [ngStyle]="{
+       'background-image': 'url(http://localhost:8080' + item.imageUrl + ')',
+       'transform': transforms[i]
+     }">
+</div>
+    </div>
+    <div class="glass info">
+        <h2>{{ artworks[activeIndex]?.title }}</h2>
+        <p>{{ artworks[activeIndex]?.description }}</p>
+    </div>
+  </div>
+</div>
+<div class="intro" style="font-family: 'Permanent Marker', cursive;">
+    <div class="image"><img src="assets/image/profile_photo.png" alt="profile_photo"></div>
+    <div class="info_1">
+      <div class="intro_1"><h1>Meet <br>the Artist</h1></div>
+      <div class="intro_2">
+        <li>Ginger tea</li>
+        <li>Handing out with gang</li>
+        <li>Punch Driver</li>
+        <li>Nature Walks</li>
+      </div>
+      <br>
+      <div class="intro_3">
+        <li>Violence</li>
+        <li>Dad Jokes</li>
+        <li>Pretentious People</li>
+        <li>Pollution</li>
+      </div>
+    </div>
+    <div class="info_2">
+      <p>My illustrations are inspired by everyday calm—rooms, 
+        <br>light, weather, solitude—but I shift them just enough to feel unreal. 
+        <br>Through soft colors and minimalist compositions,
+        <br> I try to capture the feeling of being alone
+        <br>with your thoughts, where reality and imagination gently overlap.</p>
+      <div class="Stuff-A-M">
+        <h1>Stuff About Me</h1>
+        <li>Working Software Engineer</li>
+        <li>Artist at heart</li>
+        <li>Newbie Youtuber</li>
+        <li>already out of touch with the kids</li>
+        <li>probably shorter than you</li>
+      </div>
+    </div>
+</div>
+<div class="contact" id="contact">
+       <div class="illustration1">
+            <img src="/assets/image/Hello-amico.svg" alt="contact_photo">
+       </div>
+       <div class="form-button">
+            <h1>Say Hello!</h1>
+            <p style="margin-bottom:35px;">I'd love to hear from you and always welcome any feedback 
+            <br>- please don't hesitate to get in touch
+            </p>
+            <a routerLink="/contact" class="btn-submit">Contact</a>
+       </div>
+</div>
+</body>
+</html>
+
+

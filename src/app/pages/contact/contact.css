@@ -1,0 +1,140 @@
+.contact_form {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 5px auto;
+  font-family: system-ui;
+}
+
+/* Left Side */
+.socials_1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.socials_1 h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.email-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.email-link:hover {
+  color: #e1306c;
+}
+
+/* Social Links */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.social-link img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.social-link:hover {
+  color: #e1306c;
+}
+
+.social-link:hover img {
+  transform: scale(1.15);
+}
+
+/* Right Side */
+.socials_2 {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.name-group {
+  display: flex;
+  gap: 16px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.input-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.input-field input,
+.input-field textarea {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+  border-color: #e1306c;
+}
+
+.submit-btn {
+  padding: 12px;
+  background: #e1306c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background: #c0255a;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .contact_form {
+    flex-direction: column;
+  }
+
+  .name-group {
+    flex-direction: column;
+  }
+}
