@@ -6,8 +6,8 @@
 
   <!-- Filter Tabs -->
   <div class="filters">
-    <span *ngFor="let period of Category"
-          [class.active]="period === selectedCategory"
+    <span *ngFor="let period of category"
+          [class.active]="period === selectedcategory"
           (click)="selectPeriod(period)">
       {{ period }}
     </span>

@@ -17,7 +17,7 @@ public class Artwork {
     private String imageUrl;
     private String description;
     private Integer likes;
-    private String Category;
+    private String category;
     
 	public String getTitle() {
 		return title;
@@ -44,10 +44,11 @@ public class Artwork {
 		this.likes = likes;
 	}
 	public String getCategory() {
-		return Category;
+		return category;
 	}
+
 	public void setCategory(String category) {
-		Category = category;
+		this.category = category;
 	}
 
     // Getters and Setters

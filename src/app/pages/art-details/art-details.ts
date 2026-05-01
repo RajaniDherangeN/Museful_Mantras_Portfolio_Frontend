@@ -13,18 +13,18 @@ export class ArtGalleryComponent implements OnInit {
 
   constructor(private http: HttpClient) {}  
 
-  Category = ['Desserts', 'Drinks', 'Coffee', 'Savory'];
-  selectedCategory = 'Desserts';
+  category = ['Desserts', 'Drinks', 'Coffee', 'Savory'];
+  selectedcategory = 'Desserts';
   selectedArt: any = null;
 
   artworks: any[] = [];
 
   get filteredArt() {
-    return this.artworks.filter(a => a.category === this.selectedCategory);
+    return this.artworks.filter(a => a.category === this.selectedcategory);
   }
 
   selectPeriod(period: string) {
-    this.selectedCategory = period;
+    this.selectedcategory = period;
   }
 
   @ViewChild('myPopup') myPopup!: ElementRef;
