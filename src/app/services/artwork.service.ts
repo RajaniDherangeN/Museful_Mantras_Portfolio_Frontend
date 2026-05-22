@@ -15,12 +15,12 @@ export interface Artwork {
   providedIn: 'root' // ✅ Must be root so HttpClient can be injected
 })
 export class ArtService {
-  private apiUrl = 'http://localhost:8080/api/artworks';
+  private apiUrl = 'https://museful-mantras-portfolio-api.onrender.com';
 
   constructor(private http: HttpClient) {} // ✅ HttpClient will be injected
 
   getArtworks(): Observable<Artwork[]> {
-    return this.http.get<Artwork[]>(this.apiUrl);
+  return this.http.get<Artwork[]>(`${this.apiUrl}/api/artworks`);
   }
 
   likeArtwork(id: number): Observable<Artwork> {
