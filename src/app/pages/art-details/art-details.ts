@@ -37,7 +37,7 @@ export class ArtGalleryComponent implements OnInit {
     this.selectedArt = null;
   }
 
-  ngOnInit() {
+    ngOnInit() {
     this.http.get<any[]>('https://museful-mantras-portfolio-api.onrender.com/api/artworks')
       .subscribe(data => {
         this.artworks = data;
