@@ -45,7 +45,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.http.get<any[]>('http://localhost:8080/api/random-artworks')
+    this.http.get<any[]>('https://museful-mantras-portfolio-api.onrender.com/api/random-artworks')
       .subscribe(data => {
         this.artworks = data;
         this.step = (Math.PI * 2) / this.artworks.length;

@@ -19,7 +19,7 @@
       <div *ngFor="let artwork of filteredArt" 
        class="card"
        (click)="openPopup(artwork)">
-       <img [src]="'http://localhost:8080' + artwork.imageUrl" />
+       <img [src]="getImageUrl(artwork.imageUrl)" />
     </div>
   </div>
 </div>

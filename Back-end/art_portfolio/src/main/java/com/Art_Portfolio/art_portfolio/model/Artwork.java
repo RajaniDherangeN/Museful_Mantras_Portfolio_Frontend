@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "artworks")
+@Table(name = "artworks", schema = "public")
 public class Artwork {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,7 +46,6 @@ public class Artwork {
 	public String getCategory() {
 		return category;
 	}
-
 	public void setCategory(String category) {
 		this.category = category;
 	}
