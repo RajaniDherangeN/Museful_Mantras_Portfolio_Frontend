@@ -27,6 +27,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     private ngZone: NgZone
   ) {}
 
+  
   artworks: any[] = [];
   transforms: string[] = [];
 
