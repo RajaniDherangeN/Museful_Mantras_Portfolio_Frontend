@@ -11,7 +11,7 @@ html,body{
 .hero {
   width: 100wh;
   height: 80vh;
-  background-image: url("/assets/image/Art_portfolio_home_page.png");
+  background-image: url("assets/image/Art_portfolio_home_page.png");
   background-size: 	851px 500px;
   background-repeat: no-repeat;
   background-position-y:75%;
